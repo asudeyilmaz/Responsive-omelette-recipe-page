@@ -1,0 +1,131 @@
+
+@font-face {
+	font-family: 'outfit';
+	src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format(truetype);
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "young-serif";
+	src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format(truetype); 
+	font-weight: 400;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: hsl(30, 54%, 90%);
+	font-family: 'outfit', sans-serif;
+	font-size: 16px;
+}
+.line {
+	border-bottom: 2px solid hsl(30, 18%, 87%);
+}
+/* inner */
+.card {
+	background-color: white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 30px 50px;	
+	gap: 10px;
+	color: hsl(30, 10%, 34%);
+}
+.title{
+	font-family: "young-serif", sans-serif;
+	color: hsl(24, 5%, 18%);	
+}
+.lead {
+	line-height: 1.5rem;
+}
+
+.omelette {
+	border-radius: 20px;
+	width: 100%;
+	height: auto;
+}
+.preparation {
+	background-color: hsl(330, 100%, 98%);
+	border-radius: 20px;
+	padding: 30px;
+	margin: 15px 0;
+	line-height: 3vh;
+}
+.preparation li::marker , .preparationText {
+	color: hsl(332, 51%, 32%);
+}
+.ingredients {
+	line-height: 4vh;
+}
+.ingredients li::marker {
+	color: hsl(14, 45%, 36%);
+}
+.instructionsOl { line-height: 25px; }
+.instructionsOl li { padding: 5px;}
+.instructionsOl li::marker {
+	color: hsl(14, 45%, 36%);
+	font-weight: bolder;
+}
+.innerTitle {
+	font-family: "young-serif", sans-serif;
+	color: hsl(14, 45%, 36%);
+	letter-spacing: 0.5px;
+}
+
+.nutritionTable  {
+	padding: 10px;
+	height: 20vh;
+}
+th,td {
+	border-bottom: 1px solid hsl(30, 18%, 87%);
+	text-align: left;
+}
+td {
+	color: hsl(14, 45%, 36%);
+	font-weight:bolder;
+}
+th{
+	font-weight: lighter;
+}
+tr:last-child td, tr:last-child th { border-bottom: none; }
+
+@media  screen and (max-width: 375px) {
+	html, body{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+}
+.card {
+ width: 100vw;
+  margin: 0;         /* üst-alta boşluk yok */
+  padding: 0;        /* iç boşluğu sıfır */
+  border-radius: 0;  /* köşeler düz */
+  }
+.omelette {
+display: block;
+height: auto;
+  width: 100%;
+  border-radius: 0;
+  }
+.preparation ,.nutritionTable ,.lead, .innerTitle,.title{
+	padding: 20px;
+	margin: 0px;
+}
+.preparationText { 
+	letter-spacing: 0.2px;
+	
+}
+.preparation  {
+	line-height: 3.5vh;
+}
+.lead {line-height: 2.7vh;}
+.instructionsOl, .ingredients {
+  padding-left: 30px; 
+  margin: 10px 0;    
+}
+
+}
